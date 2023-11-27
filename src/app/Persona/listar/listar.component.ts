@@ -3,9 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule} from '@angular/forms'
 import { TableModule } from 'primeng/table';
 import { ServiceService } from '../../Service/service.service';
-import { Router } from '@angular/router';
 import { Persona } from '../../Model/Persona';
-import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-listar',
