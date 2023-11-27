@@ -10,7 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 @Component({
   selector: 'app-listar',
   standalone: true,
-  imports: [CommonModule,TableModule,FormsModule,HttpClientModule],
+  imports: [CommonModule,TableModule,FormsModule],
   templateUrl: './listar.component.html',
   styleUrl: './listar.component.css'
 })
