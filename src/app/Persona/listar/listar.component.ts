@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule} from '@angular/forms'
 import { TableModule } from 'primeng/table';
 import { ServiceService } from '../../Service/service.service';
-import { Router } from '@angular/router';
 import { Persona } from '../../Model/Persona';
 
 @Component({
@@ -15,14 +14,14 @@ import { Persona } from '../../Model/Persona';
 })
 export class ListarComponent implements OnInit {
 
-  personas: Array<Persona>;
+  personas: Persona[];
   constructor(private service : ServiceService){
-    this.personas = new Array<Persona>();
+    this.personas = [];
   }
 
   ngOnInit(){
-    this.service.getPersonas().subscribe(data=>{
+    this.service.getPersonas().subscribe((data: Persona[]) => {
       this.personas = data;
     })
-  }  
+  }
 }
